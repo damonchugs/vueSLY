@@ -61,7 +61,6 @@
                 const info = this.$store.state.userInfo;
                 for(let i in info){
                     if(info[i].uName == check.name && info[i].upsw == check.psw){
-                        console.log(info[i].uid, info);
                         this.$store.commit('userCheck', info[i].uid);
                         this.$router.replace('/');
                         return false;
