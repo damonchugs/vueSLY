@@ -1,0 +1,45 @@
+@import "base.less";
+
+.btn {
+    width: 1.2rem;
+    height: 0.3rem;
+    font-size: 0.14rem;
+    text-align: center;
+    line-height: 0.3rem;
+    background-color: green;
+    margin: 0.1rem auto;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+  .slide-right-enter-active,
+  .slide-right-leave-active,
+  .slide-left-enter-active,
+  .slide-left-leave-active {
+      will-change: transform;
+      transition: all 500ms;
+      position: absolute;
+  }
+
+  .slide-right-enter {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+  }
+
+  .slide-right-leave-active {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+  }
+
+  .slide-left-enter {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+  }
+
+  .slide-left-leave-active {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+  }
