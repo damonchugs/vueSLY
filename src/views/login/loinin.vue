@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="btnForm"> 
-                    <button type="button" class="btn" v-on:click="logininName">载入通信证</button>
+                    <button type="button" class="btn" v-on:click="logininName">通行证</button>
                 </div>
             </div>
 

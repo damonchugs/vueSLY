@@ -19,7 +19,7 @@
     .seria{
         width: 100%;
         height: calc(~"100% - 2rem");
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         background-color: white;

@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         title: 'home',
-        userid: 1,
+        userid: 0,
         userInfo: []
     },
     mutations: {

@@ -57,6 +57,8 @@
     .Login{
         width: 100%;
         height: 100%;
+        position: relative;
+        z-index: 3;
 
         .pages{
             width: 100%;
@@ -64,6 +66,7 @@
             background: url('../../assets/head.jpg') no-repeat -3.4rem 0;
             background-size: auto 100%;
             position: relative;
+            z-index: 3;
 
             .mask{
                 width: 100%;

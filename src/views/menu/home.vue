@@ -21,7 +21,7 @@
                 isShow: false,
                 num: 0,
                 aniArr:[
-                    'bounce', 'flash', 'pulse', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 
+                    'bounce', 'flash', 'bounceInLeft', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 
                     'jello', 'heartBeat', 'lightSpeedIn',
                 ]
             }
@@ -40,16 +40,15 @@
                 this.sename = n;
                 this.anis = a;
                 this.num = (nums < this.aniArr.length)?nums:0;
-                setTimeout(function () { _this.reloadScence() }, 1000);
+                setTimeout(function () { _this.reSetScence() }, 1000);
             },
-            reloadScence () {
+            reSetScence () {
                 this.sename = 'default';
                 this.anis = 'animate';
                 this.isShow = false;
             },
             animate () {
                 let style = this.aniArr[this.num];
-                console.log(style);
                 this.changeScence('se1', style+' animated');
             }
         }
@@ -83,14 +82,6 @@
                 bottom: 4rem;
                 font-size: 1rem;
                 line-height: 2rem;
-            }
-
-            .seria{
-                width: 100%;
-                height: 100%;
-                position: fixed;
-                top: 100vh;
-                left: 0;
             }
         }
     }
