@@ -8,7 +8,19 @@ const router = new VueRouter({
     routes: [
         {
             path: '/',
-            component: () => import('./views/menu/home.vue')
+            component: () => import('./views/menu/home.vue'),
+            children: [
+                {
+                    path: '/home/seria',
+                    component: () => import('./views/seria/seria.vue'),
+                    children: [
+                        {
+                            path: '/home/se1',
+                            component: () => import('./views/seria/se1.vue')
+                        }
+                    ]
+                }
+            ]
         },
         {
             path: '/mine',

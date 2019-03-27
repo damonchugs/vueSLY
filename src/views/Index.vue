@@ -3,8 +3,8 @@
         <router-view class="container"></router-view>
 
         <div class="menus">
-            <router-link to="/" class="home">首页</router-link>
-            <router-link to="/mine" class="mine">我的</router-link>
+            <router-link to="/" class="home"><i class="fa fa-home"></i></router-link>
+            <router-link to="/mine" class="mine"><i class="fa fa-user"></i></router-link>
         </div>
     </div>
 </template>
@@ -41,13 +41,14 @@
 
             .home, .mine{
                 width: 40%;
-                height: 90%;
-                padding: 5% 5%;
+                height: 100%;
+                padding: 0 5%;
                 text-align: center;
                 display: inline-block;
-                font-size: 0.3rem;
                 color: #233142;
                 text-decoration: none;
+                font-size: 1rem;
+                line-height: 2em;
             }
 
             .mine{
