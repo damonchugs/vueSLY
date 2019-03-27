@@ -1,20 +1,24 @@
 <template>
     <div class="loinin">
-        <Backs :name="Names" />
-        <div class="container">
-            <div class="mask"></div>
+        <Backs class="backs" :name="Names" />
+        <div class="mask"></div>
 
+        <div class="container">
             <div class="title">
                 勇士，<br /> 我们还会再相遇吗？
             </div>
 
             <div class="forms">
                 <div class="inputForm">
-                    <input type="text" placeholder="勇士姓名">
+                    <input type="text" placeholder="勇士의姓名" v-model="username">
                 </div>
 
                 <div class="inputForm">
-                    <input type="text" placeholder="看不见的符文">
+                    <input type="text" placeholder="看不见의符文" v-model="userpsw">
+                </div>
+
+                <div class="btnForm"> 
+                    <button type="button" class="btn" v-on:click="logininName">载入通信证</button>
                 </div>
             </div>
 
@@ -32,25 +36,76 @@
         },
         data () {
             return {
-                Names: '注册'
+                Names: '注册',
+                username: '',
+                userpsw: ''
+            }
+        },
+        computed: {
+            checkInfo () {
+                var st = this.$store.state.userInfo;
+                if(this.username == ''){
+                    alert('勇士，您的姓名？')
+                    return false;
+                }
+
+                for(let i in st){
+                    if(st[i].username == this.username){
+                        alert('呀，重名了');
+                        return false;
+                    }
+                }
+                
+                if(this.userpsw == ''){
+                    alert('符文故障!!!')
+                    return false;
+                }
+                return { name: this.username, psw: this.userpsw };
+            },
+            checkSame () {
+                var st = this.$store.state.userInfo;
+                
+            }
+        },
+        methods: {
+            logininName () {
+                var data = this.checkInfo;
+                this.$store.commit('userLoinin', data);
+                this.$router.push('/Login/signin')
             }
         }    
     }
 </script>
 
 <style scoped lang="less">
+    @import '../../styles/style.less';
     .loinin{
         width: 100%;
         height: 100%;
-        background-color: white;
+        background: url('../../assets/head.jpg') no-repeat 0 0;
+        background-size: auto 100%;
         position: fixed;
         top: 0;
         left: 0;
 
+        .backs{
+            background-color: rgba(215,239,191, 0.7)
+        }
+
+        .mask{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 1.2rem;
+            background-color: rgba(215,239,191, 0.7)
+        }
+
         .container {
-            .mask{
-                background-color: rgba(215,239,191, 0.7)
-            }
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 1.2rem;
+            left: 0;
 
             .title{
                 width: 100%;
@@ -61,19 +116,6 @@
                 font-size: 1rem;
 
             }
-
-            .inputForm{
-                width: 100%;
-                margin: 0.5rem 0;
-
-                input{
-                    width: 80%;
-                    line-height: 1.2rem;
-                    height: 1.2rem;
-                    font-size: 0.4rem;
-                    padding: 0 5px;
-                }
-            }  
         }
 
         

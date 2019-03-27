@@ -1,6 +1,6 @@
 @import "base.less";
 
-.btn {
+.btns {
     width: 1.2rem;
     height: 0.3rem;
     font-size: 0.14rem;
@@ -11,7 +11,7 @@
     color: white;
 }
 
-.btn:hover {
+.btns:hover {
     opacity: 0.8;
 }
 
@@ -42,4 +42,36 @@
   .slide-left-leave-active {
       opacity: 0;
       transform: translate3d(-100%, 0, 0);
+  }
+
+  .inputForm {
+      width: 100%;
+      margin: 0.9rem 0;
+
+      input {
+          width: 80%;
+          line-height: 1.2rem;
+          height: 1.2rem;
+          font-size: 0.4rem;
+          padding: 0 5px;
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid white;
+          outline: none;
+          font-family: font2;
+          letter-spacing: 2px;
+      }
+  }
+
+  .btnForm {
+      margin-top: 2rem;
+
+      .btn {
+          padding: 0.3rem 0.7rem;
+          border: none;
+          background-color: #226089;
+          color: white;
+          border-radius: 3px;
+
+      }
   }

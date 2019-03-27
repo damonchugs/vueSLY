@@ -23,8 +23,11 @@ export default {
   watch: {
       '$route' (to, from, next) {
           let uid = this.$store.state.userid;
+          console.log(uid);
           if(uid == 0){
-              this.isShow = false;
+            this.isShow = false;
+          } else {
+            this.isShow = true;
           }
       }
   }

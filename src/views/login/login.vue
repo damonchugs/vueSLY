@@ -9,8 +9,8 @@
             </div>
 
             <div class="footer">
-                <router-link class="btn" to="/Login/loinin">注册</router-link>
-                <router-link class="btn" to="/Login/signin">登录</router-link>
+                <router-link class="btns" to="/Login/loinin">注册</router-link>
+                <router-link class="btns" to="/Login/signin">登录</router-link>
             </div>
         </div>
         <transition name="slide-left">
@@ -36,11 +36,11 @@
         watch: {
             $route (to, from, next) {
                 const path = to.path.split('/').length;
-                console.log(path);
                 if(path > 1){
                     this.isShow = false;
+                } else {
+                    this.isShow = true;
                 }
-                console.log(this);
             }
         }
     }
