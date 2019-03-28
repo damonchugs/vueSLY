@@ -78,7 +78,6 @@ const router = new VueRouter({
 
 // 路由跳转之前
 router.beforeEach((to, from, next) => {
-    console.log('routers');
     next();
 })
 
