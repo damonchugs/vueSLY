@@ -1,7 +1,7 @@
 <template>
     <div class="seria">
-        <div class="container">
-            <p>Seria Kirmin</p>
+        <div class="container" :style="backImg">
+            <p>{{title}}</p>
         </div>
         <router-view></router-view>
     </div>
@@ -14,7 +14,17 @@
         components: {
             Se1
         },
-        
+        data () {
+            return {
+                title: '',
+                backImg: '',
+            }
+        },  
+        created () {
+            console.log(12);
+            this.title = this.$attrs.title;
+            this.backImg = 'background-image: url(../../assets/'+this.$attrs.img+')';
+        }
     }
 </script>
 
@@ -34,9 +44,9 @@
             background-color: rgba(184,119,188, 0.7);
 
             p {
-                font-family: font1;
-                font-size: 2rem;
-                line-height: 98vh;
+                font-family: font2;
+                font-size: 1rem;
+                padding-top: 40vh;
             }
         }
 
