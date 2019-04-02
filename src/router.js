@@ -55,7 +55,7 @@ const router = new VueRouter({
                     component: () => import('./views/mine/reorder.vue')
                 }, {
                     path: '/mine/setting',
-                    component: () => import('./views/mine/reorder.vue')
+                    component: () => import('./views/mine/setting.vue')
                 },
             ]
         },

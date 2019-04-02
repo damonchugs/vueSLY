@@ -49,7 +49,7 @@
     </div>
 
     <transition :name="slides" :mode="modes">
-        <router-view></router-view>
+        <router-view class="views"></router-view>
     </transition>
   </div>
 </template>
@@ -190,6 +190,16 @@ export default {
         border-bottom: none;
       }
     }
+  }
+
+  .views{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 3;
   }
 }
 </style>

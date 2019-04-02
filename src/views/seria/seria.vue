@@ -17,7 +17,7 @@
     const imgArr = [
         seria_summer, seria_first, seria_summer2, seria_longhair,
         seria_summer, seria_first, seria_summer2, seria_longhair,
-        seria_summer, seria_first, seria_summer2
+        seria_summer, seria_first, seria_summer2, seria_longhair
     ];
 
     export default {
