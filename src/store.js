@@ -7,7 +7,8 @@ export default new Vuex.Store({
     state: {
         title: 'home',
         userid: 1,
-        userInfo: []
+        userInfo: [],
+        seria: 0
     },
     mutations: {
         userLoinin (state, data) {
