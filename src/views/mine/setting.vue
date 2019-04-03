@@ -31,6 +31,7 @@
             };
 
             getJSONP('http://www.gongchengku.com/App/Service/GckService.asmx/LoginForWeb', data).then(d => {
+                alert(d.respResult[0].ID);
                 this.$store.commit('userCheck', d.respResult[0].ID);
             }).catch(error => {
                 console.log(error);

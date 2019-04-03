@@ -13,11 +13,13 @@
     import seria_first from '../../assets/seria_first.jpg';
     import seria_summer2 from '../../assets/seria_summer2.jpg';
     import seria_longhair from '../../assets/seria_longhair.jpg';
+    import seria_hefu from '../../assets/seria_hefu.jpg';
+    import seria_wedding from '../../assets/seria_wedding.jpg';
     
     const imgArr = [
-        seria_summer, seria_first, seria_summer2, seria_longhair,
-        seria_summer, seria_first, seria_summer2, seria_longhair,
-        seria_summer, seria_first, seria_summer2, seria_longhair
+        seria_summer, seria_first, seria_summer2, seria_longhair, seria_hefu, seria_wedding,
+        seria_summer, seria_first, seria_summer2, seria_longhair, seria_hefu, seria_wedding,
+        seria_summer, seria_first, seria_summer2, seria_longhair, seria_hefu, seria_wedding
     ];
 
     export default {
@@ -38,7 +40,7 @@
         },
         watch: {
             title (val, valo) {
-                console.log(val, valo, 'asd');
+                // console.log(val, valo, 'asd');
             }
         }, 
         updated () {
