@@ -2,7 +2,7 @@
   "name": "doclogin",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://damonchugs.github.io/github-vue-sly",
+  "homepage": "https://damonchugs.github.io/vueSLY",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
